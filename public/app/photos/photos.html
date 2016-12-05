@@ -1,6 +1,6 @@
 <div class="container" style="margin-top:50px">
 	<div class="row" style="margin-left:auto">
-		<div class="col-md-3" ng-repeat="foto in fotos">
+		<div class="col-md-3" ng-repeat="foto in fotos | filter: filter">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">{{foto.titulo}}</h3>
@@ -11,5 +11,6 @@
 				</div>
 			</div>
 		</div>
+		<input ng-model="filter" type="text" class="form-control" placeholder="Search">
 	</div>
 </div>
