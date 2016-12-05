@@ -3,11 +3,13 @@ angular.module("route", ["ngRoute"])
 
 		$routeProvider.when("/", {
 			templateUrl: "app/photos/photos.html",
-			controller: "PhotosController"
+			controller: "PhotosController",
+			activetab: "home"
 		}),
 			$routeProvider.when("/cart", {
 			templateUrl: "app/cart/cart.html",
-			controller: "CartController"
+			controller: "CartController",
+			activetab: "cart"
 		});
 			
 

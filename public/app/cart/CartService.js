@@ -1,5 +1,5 @@
 angular.module("cart")
-	.factory("CartService", function ($rootScope) {
+	.factory("CartService", function ($rootScope ) {
 
 		$rootScope.cartQnt = 0
 		var service = {
