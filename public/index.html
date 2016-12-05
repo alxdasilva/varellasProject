@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="varellasProject">
+
+<head>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap-responsive.css">
+	<script src="js/lib/angular.js"></script>
+	<script src="js/lib/angular-animate.min.js"></script>
+	<script src="js/lib/angular-route.js"></script>
+	<script src="js/lib/angular-resource.min.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/cart/CartController.js"></script>
+	<script src="app/cart/CartService.js"></script>
+	<script src="app/photos/PhotosController.js"></script>
+	<script src="app/route/appRoute.js"></script>
+	<meta charset="UTF-8">
+	<title>VarellasEnterprise</title>
+</head>
+
+<body>
+	<div ng-include="'app/include/navBar.html'"></div>
+	<ng-view></ng-view>
+</body>
+
+</html>
