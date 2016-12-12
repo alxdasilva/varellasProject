@@ -1,16 +1,23 @@
-<div ng-controller= "PhotosController"class="container" style="margin-top:50px">
+<div class="container" style="margin-top:50px">
 	<div class="row" style="margin-left:auto">
-	
-		<div class="col-md-3" ng-repeat="foto in fotos | filter: filter">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">{{foto.titulo}}</h3>
+		<div class="col-sm-9">
+
+			<div class="push-left well col-sm-3 producto" ng-repeat="p in products" >
+
+				<h4>{{p.name}}</h4>
+
+				<div class="imagen">
+					<img ng-src="app/imagenes/{{p.imagen}}" width="50">
 				</div>
-				<div class="panel-body">
-					<img style="width:100" class="img-responsive" src="{{foto.url}}" alt="{{foto.titulo}}">
-					<button type="button" style="width:100%" class="btn btn-warning" ng-model="data.product" ng-click="addToCart(foto.url)">Add to cart</button>
-				</div>
+
+				<div class="precio">R{{p.price | currency}}</div>
+
+				<p>
+					{{p.description}}
+				</p>
+				<button ng-controller="CartController" type="button" style="width:100%" class="btn btn-warning" ng-click="addtoCart(p)">Add to cart</button>
 			</div>
+
 		</div>
 	</div>
 </div>

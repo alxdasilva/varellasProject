@@ -2,14 +2,20 @@
 <html lang="en" ng-app="varellasProject">
 
 <head>
+	<!--StyleSheet-->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap/css/bootstrap-responsive.css">
+	
+	<!--Lib-->
 	<script src="js/lib/angular.js"></script>
 	<script src="js/lib/angular-animate.min.js"></script>
 	<script src="js/lib/angular-route.js"></script>
 	<script src="js/lib/angular-resource.min.js"></script>
+	
+	<!--Files.js-->
 	<script src="app/app.js"></script>
 	<script src="app/cart/CartController.js"></script>
+	<script src="app/inicio/inicio.js"></script>
 	<script src="app/cart/CartService.js"></script>
 	<script src="app/photos/PhotosController.js"></script>
 	<script src="app/route/appRoute.js"></script>
@@ -17,7 +23,7 @@
 	<title>VarellasEnterprise</title>
 </head>
 
-<body>
+<body ng-controller="PhotosController">
 	<div ng-include="'app/include/navBar.html'"></div>
 	<ng-view></ng-view>
 </body>
